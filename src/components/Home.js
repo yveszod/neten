@@ -9,16 +9,20 @@ const Home = () => {
         { title: "Blog Entry #3", body: "Lorem Ipsum Dolor sit amet", author: "Bastian", id: 3 },
     ]
 
-
     const [blogs, setBlogs] = useState(initial_blogs);
 
-    return ( 
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter((blog) => blog.id !== id);
+        setBlogs(newBlogs);
+    }
+
+    return (
         <div className="home">
             <div className="container">
-                <BlogList blogs={blogs} />
+                <BlogList blogs={blogs} handleDelete={handleDelete} />
             </div>
         </div>
      );
 }
- 
+
 export default Home;
