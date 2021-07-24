@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
-*{
+:root {
+  --main: #1e90ff;
+  --second: #4CAF50;
+  --gray: #aaa;
+}
+
+html{
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+* {
   margin: 0;
   font-family: 'Montserrat', 'Arial', sans-serif;
   color: #222;
@@ -11,11 +22,95 @@ html, body {
   height: 100%;
 }
 
-.container{
+.container {
   max-width: 768px;
   margin: 0 auto;
 }
 
-a{
+.content{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+a {
   text-decoration: none;
+}
+
+.container input,
+.container textarea,
+.container select {
+  display: block;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #dadada;
+  font-size: 1rem;
+  padding: 0.75rem;
+  margin: 0;
+  box-shadow: 1px 6px 11px rgb(0 0 0 / 16%);
+  margin-bottom: 2rem;
+  resize: none;
+}
+
+.container input:focus,
+.container textarea:focus,
+.container select:focus {
+  outline: none;
+  box-shadow: 1px 6px 11px rgb(0 0 0 / 25%);
+}
+
+.container label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+button {
+  background: var(--second);
+  display: block;
+  border: none;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 1px 6px 11px rgb(0 0 0 / 16%);
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+nav.navbar {
+    padding: 0.5rem;
+    box-shadow: 1px 12px 16px rgb(0 0 0 / 16%);
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+h3.logo {
+    font-size: 2.25rem;
+    font-weight: 100;
+    color: var(--second);
+}
+.links a {
+    margin-left: 1rem;
+    color: var(--gray);
+}
+.blog-box {
+    border: 1px solid rgba(0,0,0,0.16);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0px 11px 15px rgb(0 0 0 / 16%);
+    border-radius: 0.5rem;
+}
+.blog-box > a > h2 {
+    font-size: 1.2rem;
+}
+
+.blog-box > a {
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+article > * {
+    margin-bottom: 2rem;
 }

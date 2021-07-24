@@ -5,7 +5,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="container">
                 <div className="flex">
-                    <h3>NetEn</h3>
+                    <h3 className="logo">NetEn</h3>
                     <div className="links">
                         <Link to="/">Home</Link>
                         <Link to="/create">Create</Link>
